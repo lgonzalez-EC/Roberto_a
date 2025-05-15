@@ -4,7 +4,7 @@
 body {
     color: #797979;
     background: #fafafa;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sauce SemiBold', sans-serif;
 }
 
 h1,
@@ -502,7 +502,8 @@ a:focus {
 }
 
 .about .about-text p {
-    font-size: 16px;
+    color: #272727;
+    font-size: 18px;
 }
 
 .about .skills {
