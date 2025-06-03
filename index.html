@@ -2,11 +2,11 @@
 <html lang="es">
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <title>Roberto Acuña - Representante Comercial</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Free Website Template" name="keywords">
-    <meta content="Free Website Template" name="description">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
 
     <!-- Favicon -->
     <link href="img/icon.webp" rel="icon">
@@ -16,6 +16,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
         rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
     <!-- CSS Libraries -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -37,21 +38,30 @@
     <div class="navbar navbar-expand-lg bg-light navbar-light sticky-top">
         <div class="container-fluid">
             <a href="index.html" class="navbar-brand">
-                <span id="navbar-text">Roberto A.</span>
-                <img id="navbar-logo" src="img/logo.png" alt="Logo" style="display: none; height: 40px;">
+                <img src="img/logo_white.webp" alt="Logo" style="height: 70px;" id="navbar-logo">
             </a>
-            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
                 <div class="navbar-nav ml-auto">
-                    <a href="#home" class="nav-item nav-link active">Inicio</a>
-                    <a href="#about" class="nav-item nav-link">Sobre mi</a>
-                    <a href="#service" class="nav-item nav-link">Servicios</a>
-                    <a href="#experience" class="nav-item nav-link">Experiencia</a>
-                    <a href="#review" class="nav-item nav-link">Reseñas</a>
-                    <a href="#contact" class="nav-item nav-link">Contacto</a>
+                    <a href="#home" data-i18n="home" class="nav-item nav-link active">Inicio</a>
+                    <a href="#about" data-i18n="about" class="nav-item nav-link">Sobre mi</a>
+                    <a href="#service" data-i18n="services" class="nav-item nav-link">Servicios</a>
+                    <!-- <a href="#experience" class="nav-item nav-link">Experiencia</a> -->
+                    <!-- <a href="#review" class="nav-item nav-link">Reseñas</a> -->
+                    <a href="#contact" data-i18n="contact" class="nav-item nav-link">Contacto</a>
                 </div>
+                <label class="switch-lang mb-0 ms-3">
+                    <span class="flag flag-es" id="flag-es" aria-label="Español">🇲🇽</span>
+                    <!-- <img src="img/flag-mx.png" class="flag flag-es" id="flag-es" alt="Español" aria-label="Español"> -->
+                    <input type="checkbox" id="lang-toggle">
+                    <span class="slider"></span>
+                    <span class="flag flag-en" id="flag-en" aria-label="English">🇬🇧</span>
+                    <!-- <img src="img/flag-gb.png" class="flag flag-en" id="flag-en" alt="English" aria-label="English"> -->
+                </label>
+                <span class="lang-label text-white" id="lang-label">ES</span>
             </div>
         </div>
     </div>
@@ -66,9 +76,8 @@
                     <div class="hero-content">
                         <div class="hero-text">
                             <!-- <p>I'm</p> -->
-                            <h1>Roberto Acuña</h1>
-                            <h2></h2>
-                            <div class="typed-text">Representante Comercial, Commercial Representative, Con 19 años de experiencia</div>
+                            <h1 style="font-family: 'Montserrat', sans-serif;">Roberto Acuña</h1>
+                            <h3 data-i18n="title" class="text-white">Representante Comercial</h3>
                         </div>
                         <!-- <div class="hero-btn">
                                 <a class="btn" href="">Hire Me</a>
@@ -100,10 +109,11 @@
                     <div class="about-content text-center">
                         <div class="section-header text-left">
                             <p>Roberto Acuña</p>
-                            <h3>Representante de Ventas</h3>
                         </div>
+                        <p class="text-left" data-i18n="title" style="font-size: 1.3em;">Representante Comercial</p>
                         <div class="about-text">
-                            <p class="text-justify" style="text-align: justify;">
+                            <p class="text-justify" data-i18n="description"
+                                style="text-align: justify; font-size: 1.1em; line-height: 1.6;">
                                 Con casi 19 años de experiencia impulsando relaciones comerciales sólidas y estratégicas
                                 en la industria
                                 automotriz y metalmecánica, me especializo en representar productos y servicios de alta
@@ -126,15 +136,19 @@
                 <div class="col-lg-12 text-center">
                     <div class="about-content">
                         <div class="section-header">
-                            <p>Sobre ]Mi</p>
-                            <h3>Representante de Ventas</h3>
+                            <p data-i18n="about">Sobre Mi</p>
                         </div>
                         <div class="about-text">
-                            <p style="font-size: 1.1em; line-height: 1.6; color: #555;">
-                                Mi trayectoria profesional ha estado llena de retos y aprendizajes. A lo largo de estos casi 19 años, he tenido la oportunidad de colaborar con equipos de trabajo excepcionales, quienes me han brindado valiosas lecciones tanto en lo positivo como en los desafíos del mundo comercial.
+                            <p style="font-size: 1.1em; line-height: 1.6; color: #555; text-align: justify;" data-i18n="about_description">
+                                Mi trayectoria profesional ha estado llena de retos y aprendizajes. A lo largo de estos
+                                casi 19 años, he tenido la oportunidad de colaborar con equipos de trabajo
+                                excepcionales, quienes me han brindado valiosas lecciones tanto en lo positivo como en
+                                los desafíos del mundo comercial.
                             </p>
-                            <p style="font-size: 1.1em; line-height: 1.6; color: #555;">
-                                Lo que más valoro de mi carrera es haber establecido relaciones duraderas basadas en la confianza, el compromiso y el profesionalismo. Cada etapa me ha formado como un asesor comercial íntegro, con visión estratégica y un fuerte enfoque en resultados.
+                            <p style="font-size: 1.1em; line-height: 1.6; color: #555; text-align: justify;" data-i18n="about_description2">
+                                Lo que más valoro de mi carrera es haber establecido relaciones duraderas basadas en la
+                                confianza, el compromiso y el profesionalismo. Cada etapa me ha formado como un asesor
+                                comercial íntegro, con visión estratégica y un fuerte enfoque en resultados.
                             </p>
                         </div>
                     </div>
@@ -149,60 +163,42 @@
     <div class="service" id="service">
         <div class="container">
             <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
-                <p>Mi Especialidad</p>
-                <h3>Ofrezco una amplia gama de servicios enfocados en el desarrollo y fortalecimiento de relaciones
-                    comerciales en el sector industrial:</h3>
+                <p data-i18n="title_especiality">Mi Especialidad</p>
             </div>
-            <div class="row">
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.0s">
-                    <div class="service-item">
-                        <div class="service-icon">
-                            <i class="fa-solid fa-car"></i>
+            <p class="text-justify text-center" data-i18n="description_especiality"
+                style="font-size: 1.1em; line-height: 1.6; color: #555; text-align: justify;">Ofrezco una amplia gama de
+                servicios enfocados en el desarrollo y fortalecimiento de relaciones
+                comerciales en el sector industrial:</p>
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-8 col-sm-10 mb-4 d-flex justify-content-center">
+                    <div class="service-item w-100 d-flex flex-column align-items-center">
+                        <div class="service-icon mb-3">
+                            <i class="fa-solid fa-car" style="font-size: 5rem;"></i>
                         </div>
-                        <div class="service-text">
-                            <h3>Sector Automotriz</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet elit. Phase nec preti mi. Curabi facilis ornare velit non
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.2s">
-                    <div class="service-item">
-                        <div class="service-icon">
-                            <i class="fa-solid fa-wrench"></i>
-                        </div>
-                        <div class="service-text">
-                            <h3>Metalmecanica</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet elit. Phase nec preti mi. Curabi facilis ornare velit non
-                            </p>
+                        <div class="service-text text-center">
+                            <h3 data-i18n="especiality_1">Sector Automotriz</h3>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.4s">
-                    <div class="service-item">
-                        <div class="service-icon">
-                            <i class="fa-solid fa-industry"></i>
+
+                <div class="col-lg-4 col-md-8 col-sm-10 mb-4 d-flex justify-content-center">
+                    <div class="service-item w-100 d-flex flex-column align-items-center">
+                        <div class="service-icon mb-3">
+                            <i class="fa-solid fa-wrench" style="font-size: 5rem;"></i>
                         </div>
-                        <div class="service-text">
-                            <h3>Sector Industrial</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet elit. Phase nec preti mi. Curabi facilis ornare velit non
-                            </p>
+                        <div class="service-text text-center">
+                            <h3 data-i18n="especiality_2">Metalmecanica</h3>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.6s">
-                    <div class="service-item">
-                        <div class="service-icon">
-                            <i class="fab fa-apple"></i>
+
+                <div class="col-lg-4 col-md-8 col-sm-10 mb-4 d-flex justify-content-center">
+                    <div class="service-item w-100 d-flex flex-column align-items-center">
+                        <div class="service-icon mb-3">
+                            <i class="fa-solid fa-industry" style="font-size: 5rem;"></i>
                         </div>
-                        <div class="service-text">
-                            <h3>Apps Development</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet elit. Phase nec preti mi. Curabi facilis ornare velit non
-                            </p>
+                        <div class="service-text text-center">
+                            <h3 data-i18n="especiality_3">Sector Industrial</h3>
                         </div>
                     </div>
                 </div>
@@ -383,96 +379,6 @@
     <!-- Banner End -->
 
 
-    <!-- Portfolio Start -->
-    <!-- <div class="portfolio" id="portfolio">
-            <div class="container">
-                <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
-                    <p>My Portfolio</p>
-                    <h2>My Excellent Portfolio</h2>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <ul id="portfolio-filter">
-                            <li data-filter="*" class="filter-active">All</li>
-                            <li data-filter=".filter-1">Web Design</li>
-                            <li data-filter=".filter-2">Mobile Apps</li>
-                            <li data-filter=".filter-3">Game Dev</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="row portfolio-container">
-                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-1 wow fadeInUp" data-wow-delay="0.0s">
-                        <div class="portfolio-wrap">
-                            <div class="portfolio-img">
-                                <img src="img/portfolio-1.jpg" alt="Image">
-                            </div>
-                            <div class="portfolio-text">
-                                <h3>eCommerce Website</h3>
-                                <a class="btn" href="img/portfolio-1.jpg" data-lightbox="portfolio">+</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-2 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="portfolio-wrap">
-                            <div class="portfolio-img">
-                                <img src="img/portfolio-2.jpg" alt="Image">
-                            </div>
-                            <div class="portfolio-text">
-                                <h3>Product Landing Page</h3>
-                                <a class="btn" href="img/portfolio-2.jpg" data-lightbox="portfolio">+</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-3 wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="portfolio-wrap">
-                            <div class="portfolio-img">
-                                <img src="img/portfolio-3.jpg" alt="Image">
-                            </div>
-                            <div class="portfolio-text">
-                                <h3>JavaScript quiz game</h3>
-                                <a class="btn" href="img/portfolio-3.jpg" data-lightbox="portfolio">+</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-1 wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="portfolio-wrap">
-                            <div class="portfolio-img">
-                                <img src="img/portfolio-4.jpg" alt="Image">
-                            </div>
-                            <div class="portfolio-text">
-                                <h3>JavaScript drawing</h3>
-                                <a class="btn" href="img/portfolio-4.jpg" data-lightbox="portfolio">+</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-2 wow fadeInUp" data-wow-delay="0.8s">
-                        <div class="portfolio-wrap">
-                            <div class="portfolio-img">
-                                <img src="img/portfolio-5.jpg" alt="Image">
-                            </div>
-                            <div class="portfolio-text">
-                                <h3>Social Mobile Apps</h3>
-                                <a class="btn" href="img/portfolio-5.jpg" data-lightbox="portfolio">+</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-3 wow fadeInUp" data-wow-delay="1s">
-                        <div class="portfolio-wrap">
-                            <div class="portfolio-img">
-                                <img src="img/portfolio-6.jpg" alt="Image">
-                            </div>
-                            <div class="portfolio-text">
-                                <h3>Company Website</h3>
-                                <a class="btn" href="img/portfolio-6.jpg" data-lightbox="portfolio">+</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-    <!-- Portfolio End -->
-
-
     <!-- Banner Start -->
     <!-- <div class="banner wow zoomIn" data-wow-delay="0.1s">
             <div class="container">
@@ -491,119 +397,22 @@
     <!-- Banner End -->
 
 
-    <!-- Price Start -->
-    <!-- <div class="price" id="price">
-            <div class="container">
-                <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
-                    <p>Pricing Plan</p>
-                    <h2>Affordable Price</h2>
-                </div>
-                <div class="row">
-                    <div class="col-md-4 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="price-item">
-                            <div class="price-header">
-                                <div class="price-title">
-                                    <h2>Basic</h2>
-                                </div>
-                                <div class="price-prices">
-                                    <h2><small>$</small>49<span>/ mo</span></h2>
-                                </div>
-                            </div>
-                            <div class="price-body">
-                                <div class="price-description">
-                                    <ul>
-                                        <li>Bootstrap 4</li>
-                                        <li>Font Awesome 5</li>
-                                        <li>Responsive Design</li>
-                                        <li>Browser Compatibility</li>
-                                        <li>Easy To Use</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="price-footer">
-                                <div class="price-action">
-                                    <a class="btn" href="">Order Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 wow fadeInUp" data-wow-delay="0.0s">
-                        <div class="price-item featured-item">
-                            <div class="price-header">
-                                <div class="price-title">
-                                    <h2>Standard</h2>
-                                </div>
-                                <div class="price-prices">
-                                    <h2><small>$</small>99<span>/ mo</span></h2>
-                                </div>
-                            </div>
-                            <div class="price-body">
-                                <div class="price-description">
-                                    <ul>
-                                        <li>Bootstrap 4</li>
-                                        <li>Font Awesome 5</li>
-                                        <li>Responsive Design</li>
-                                        <li>Browser Compatibility</li>
-                                        <li>Easy To Use</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="price-footer">
-                                <div class="price-action">
-                                    <a class="btn" href="">Order Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="price-item">
-                            <div class="price-header">
-                                <div class="price-title">
-                                    <h2>Premium</h2>
-                                </div>
-                                <div class="price-prices">
-                                    <h2><small>$</small>149<span>/ mo</span></h2>
-                                </div>
-                            </div>
-                            <div class="price-body">
-                                <div class="price-description">
-                                    <ul>
-                                        <li>Bootstrap 4</li>
-                                        <li>Font Awesome 5</li>
-                                        <li>Responsive Design</li>
-                                        <li>Browser Compatibility</li>
-                                        <li>Easy To Use</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="price-footer">
-                                <div class="price-action">
-                                    <a class="btn" href="">Order Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-    <!-- Price End -->
-
-
     <!-- Testimonial Start -->
     <div class="testimonial wow fadeInUp" data-wow-delay="0.1s" id="review">
         <div class="container">
             <div class=" text-center">
-                <h2 class="display-4 text-white">¿Quieres saber más?</h2>
-                <p class="text-white my-3">Contáctame directamente a través de WhatsApp para más información.</p>
+                <h2 class="display-4 text-white" data-i18n="banner_text1">¿Quieres saber más?</h2>
+                <p class="text-white my-3" data-i18n="banner_text2">Contáctame directamente a través de WhatsApp para más información.</p>
             </div>
             <div class="text-center mt-4">
-                <a href="https://wa.me/1234567890" target="_blank" class="btn" style="background-color: #25D366; color: white; font-size: 1.2em;">
+                <a href="https://wa.me/1234567890" target="_blank" class="btn"
+                    style="background-color: #25D366; color: white; font-size: 1.2em;"
+                    data-i18n="send_message">
                     <i class="fab fa-whatsapp"></i> Enviar Mensaje
                 </a>
             </div>
         </div>
     </div>
-
 
 
     <!-- <div class="testimonial wow fadeInUp" data-wow-delay="0.1s" id="review">
@@ -658,100 +467,6 @@
     <!-- Testimonial End -->
 
 
-    <!-- Team Start -->
-    <!-- <div class="team" id="team">
-            <div class="container">
-                <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
-                    <p>My Team</p>
-                    <h2>Expert Team Members</h2>
-                </div>
-                <div class="row">
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.0s">
-                        <div class="team-item">
-                            <div class="team-img">
-                                <img src="img/team-1.jpg" alt="Image">
-                            </div>
-                            <div class="team-text">
-                                <h2>Mollie Ross</h2>
-                                <h4>Web Designer</h4>
-                                <p>
-                                    Lorem ipsum dolor sit amet consec adipis elit. Etiam accum lacus
-                                </p>
-                                <div class="team-social">
-                                    <a class="btn" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn" href=""><i class="fab fa-linkedin-in"></i></a>
-                                    <a class="btn" href=""><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="team-item">
-                            <div class="team-img">
-                                <img src="img/team-2.jpg" alt="Image">
-                            </div>
-                            <div class="team-text">
-                                <h2>Dylan Adams</h2>
-                                <h4>Web Developer</h4>
-                                <p>
-                                    Lorem ipsum dolor sit amet consec adipis elit. Etiam accum lacus
-                                </p>
-                                <div class="team-social">
-                                    <a class="btn" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn" href=""><i class="fab fa-linkedin-in"></i></a>
-                                    <a class="btn" href=""><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="team-item">
-                            <div class="team-img">
-                                <img src="img/team-3.jpg" alt="Image">
-                            </div>
-                            <div class="team-text">
-                                <h2>Jennifer Page</h2>
-                                <h4>Apps Designer</h4>
-                                <p>
-                                    Lorem ipsum dolor sit amet consec adipis elit. Etiam accum lacus
-                                </p>
-                                <div class="team-social">
-                                    <a class="btn" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn" href=""><i class="fab fa-linkedin-in"></i></a>
-                                    <a class="btn" href=""><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="team-item">
-                            <div class="team-img">
-                                <img src="img/team-4.jpg" alt="Image">
-                            </div>
-                            <div class="team-text">
-                                <h2>Josh Dunn</h2>
-                                <h4>Apps Developer</h4>
-                                <p>
-                                    Lorem ipsum dolor sit amet consec adipis elit. Etiam accum lacus
-                                </p>
-                                <div class="team-social">
-                                    <a class="btn" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn" href=""><i class="fab fa-linkedin-in"></i></a>
-                                    <a class="btn" href=""><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-    <!-- Team End -->
-
-
     <!-- Contact Start -->
     <div class="contact wow fadeInUp" data-wow-delay="0.1s" id="contact">
         <div class="container-fluid">
@@ -763,29 +478,27 @@
                             <div id="success"></div>
                             <form name="sentMessage" id="contactForm" novalidate="novalidate">
                                 <div class="control-group">
-                                    <input type="text" class="form-control" id="name" placeholder="Nombre"
-                                        required="required" data-validation-required-message="Please enter your name" />
+                                    <input type="text" class="form-control" id="contact-name" placeholder="Nombre"
+                                        required="required" data-i18n="contact_name" />
                                     <p class="help-block"></p>
                                 </div>
                                 <div class="control-group">
                                     <input type="email" class="form-control" id="email" placeholder="Correo"
-                                        required="required"
-                                        data-validation-required-message="Please enter your email" />
+                                        required="required" data-i18n="contact_email" />
                                     <p class="help-block"></p>
                                 </div>
                                 <div class="control-group">
                                     <input type="text" class="form-control" id="subject" placeholder="Asunto"
-                                        required="required" data-validation-required-message="Please enter a subject" />
+                                        required="required" data-i18n="contact_subject" />
                                     <p class="help-block"></p>
                                 </div>
                                 <div class="control-group">
                                     <textarea class="form-control" id="message" placeholder="Mensaje"
-                                        required="required"
-                                        data-validation-required-message="Please enter your message"></textarea>
+                                        required="required" data-i18n="contact_message"></textarea>
                                     <p class="help-block"></p>
                                 </div>
                                 <div>
-                                    <button class="btn" type="submit" id="sendMessageButton">Enviar Mensaje</button>
+                                    <button class="btn" data-i18n="send_message" type="submit" id="sendMessageButton">Enviar Mensaje</button>
                                 </div>
                             </form>
                         </div>
@@ -860,22 +573,19 @@
                     <h3>123 Street, New York, USA</h3>
                     <div class="footer-menu">
                         <p>+012 345 67890</p>
-                        <p>info@example.com</p>
+                        <p>ra@robertoacuna.com</p>
                     </div>
                     <div class="footer-social">
-                        <a href=""><i class="fab fa-twitter"></i></a>
                         <a href=""><i class="fab fa-facebook-f"></i></a>
-                        <a href=""><i class="fab fa-youtube"></i></a>
                         <a href=""><i class="fab fa-instagram"></i></a>
                         <a href=""><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
             </div>
             <div class="container copyright">
-                <p>&copy; <a href="#">Your Site Name</a>, All Right Reserved |
-
+                <p>&copy; <a href="#">Roberto Acuña</a>, Todos los derechos reservados |
                     <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                    Designed By <a href="https://htmlcodex.com">HTML Codex</a>
+                    Diseñado por <a href="https://htmlcodex.com">HTML Codex</a>
                 </p>
             </div>
         </div>
@@ -909,9 +619,9 @@
     <!-- AOS JS -->
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
-      AOS.init({
-        once: true // Animación solo una vez, puedes quitarlo si quieres que se repita
-      });
+        AOS.init({
+            once: true // Animación solo una vez, puedes quitarlo si quieres que se repita
+        });
     </script>
 
     <!-- Contact Javascript File -->
@@ -921,23 +631,37 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 
+    <!-- Language Toggle Script -->
+    <script src="lang.js"></script>
+
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const navbar = document.querySelector(".navbar");
-            const navbarText = document.getElementById("navbar-text");
             const navbarLogo = document.getElementById("navbar-logo");
 
             window.addEventListener("scroll", function () {
                 if (window.scrollY > 50) {
                     navbar.classList.add("scrolled");
-                    navbarText.style.display = "none";
-                    navbarLogo.style.display = "inline-block";
+                    navbarLogo.src = "img/logo.webp"; // Cambia la ruta de la imagen según tu estructura
                 } else {
                     navbar.classList.remove("scrolled");
-                    navbarText.style.display = "inline-block";
-                    navbarLogo.style.display = "none";
+                    navbarLogo.src = "img/logo_white.webp";
                 }
             });
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const toggle = document.getElementById('lang-toggle');
+            const label = document.getElementById('lang-label');
+            toggle.addEventListener('change', function () {
+                const lang = this.checked ? 'en' : 'es';
+                label.textContent = this.checked ? 'EN' : 'ES';
+                setLanguage(lang);
+            });
+            // Inicializa el idioma al cargar
+            setLanguage('es');
         });
     </script>
 </body>
